@@ -10,9 +10,9 @@ public class Main {
                 "и я попытался проследить эту идею до логического конца." +
                 " Действие книги я поместил в Англию, чтобы подчеркнуть, что англоязычные нации ничем не лучше других и что тоталитаризм," +
                 " если с ним не бороться, может победить повсюду.";
-        Stream.of(leadersText.split("[ -, - . - ( - ) ]"))
+        Stream<String> someVocabulary = Stream.of(leadersText.split("[ -, - . - ( - ) ]"))
                 .map(String::toLowerCase)
                 .distinct().sorted();
-
+        someVocabulary.forEach(System.out::println);
         }
 }
